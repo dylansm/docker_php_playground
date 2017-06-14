@@ -26,6 +26,8 @@ services:
     volumes:
       - .:/usr/share/nginx:rw
       - ./etc/php7/conf.d/xdebug.ini:/etc/php7/conf.d/xdebug.ini:ro
+      - ./etc/php7/php-fpm.conf:/etc/php7/php-fpm.conf:ro
+      - ./etc/php7/php-fpm.d/www.conf:/etc/php7/php-fpm.d/www.conf:ro
 
   web:
     container_name: craft-test
